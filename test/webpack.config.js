@@ -1,5 +1,5 @@
 const path = require('path')
-const DefineAfterBundleWebpackPlugin = require('../build')
+const { DefineAfterBundleWebpackPlugin } = require('../build')
 
 module.exports = {
     entry: path.resolve(__dirname, 'index.js'),

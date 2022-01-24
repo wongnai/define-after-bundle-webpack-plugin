@@ -19,7 +19,9 @@ export default {
     resolve(),
     commonjs(),
     typescript({
-      outDir: config.deploy
+      outDir: config.deploy,
+      declaration: true,
+      emitDeclarationOnly: true,
     }),
     json(),
     visualizer({

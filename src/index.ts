@@ -3,7 +3,7 @@ import { ConcatSource } from 'webpack-sources'
 
 const PLUGIN_NAME = 'DefineAfterBundleWebpackPlugin'
 
-class DefineAfterBundleWebpackPlugin {
+export class DefineAfterBundleWebpackPlugin {
 	replaceMapper: Record<string, any>
 
 	constructor(replaceMapper: Record<string, any>) {
@@ -39,5 +39,3 @@ class DefineAfterBundleWebpackPlugin {
 		})
 	}
 }
-
-module.exports = DefineAfterBundleWebpackPlugin

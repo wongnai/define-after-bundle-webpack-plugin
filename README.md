@@ -18,7 +18,7 @@ yarn add --dev define-after-bundle-webpack-plugin
 #### In your webpack config
 
 ```js
-const DefineAfterBundleWebpackPlugin = require('define-after-bundle-webpack-plugin')
+const { DefineAfterBundleWebpackPlugin } = require('define-after-bundle-webpack-plugin')
 
 module.exports = {
     ...
