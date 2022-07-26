@@ -13,6 +13,6 @@ module.exports = {
         }),
     ],
     target: 'node',
-    mode: 'development',
-    devtool: false,
+    mode: 'production',
+    devtool: 'source-map',
 }

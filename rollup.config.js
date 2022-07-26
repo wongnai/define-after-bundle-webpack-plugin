@@ -9,23 +9,24 @@ import visualizer from 'rollup-plugin-visualizer'
 import config from './package.json'
 
 export default {
-  input: config.entry,
-  output: {
-    dir: config.deploy,
-    format: 'cjs',
-    sourcemap: true,
-  },
-  plugins: [
-    resolve(),
-    commonjs(),
-    typescript({
-      outDir: config.deploy,
-      declaration: true,
-      emitDeclarationOnly: true,
-    }),
-    json(),
-    visualizer({
-      filename: path.resolve(config.deploy, 'stat.html')
-    }),
-  ],
+    input: config.entry,
+    external: ['webpack'],
+    output: {
+        dir: config.deploy,
+        format: 'cjs',
+        sourcemap: true,
+    },
+    plugins: [
+        resolve(),
+        commonjs(),
+        typescript({
+            outDir: config.deploy,
+            declaration: true,
+            emitDeclarationOnly: true,
+        }),
+        json(),
+        visualizer({
+            filename: path.resolve(config.deploy, 'stat.html')
+        }),
+    ],
 };
