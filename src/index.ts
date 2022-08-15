@@ -13,6 +13,8 @@ export class DefineAfterBundleWebpackPlugin {
 
 			compilation.hooks.processAssets.tap(DefineAfterBundleWebpackPlugin.name, assets => {
 				for (const index in assets) {
+					if (!/\.(js|jsx|ts|tsx)$/i.test(index)) continue
+
 					const asset = compilation.getAsset(index)
 					const source = asset.source
 
